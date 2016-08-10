@@ -13,7 +13,6 @@ awk '{print $1"\t"$2"\t"$4"\t"$5}' qsignature.hg38.bed > qsignature.hg38.txt
 
 ```
 wget https://raw.githubusercontent.com/lpantano/chrom_map/master/chrom_map.py
-python chrom_map.py --name GRCh37_ensembl2UCSC --input acmg56.bed --out acmg56.ucsc.bed
+python chrom_map.py --name GRCh37_ensembl2UCSC --input acmg56.GRCh37.bed --out acmg56.ucsc.bed
 CrossMap.py bed ../qsignature/hg19ToHg38.over.chain.gz acmg56.ucsc.bed acmg56.ucsc.hg38.bed
-python chrom_map.py --name GRCh37_ensembl2UCSC --rev --input acmg56.ucsc.hg38.bed --out acmg56.hg38.bed
 ```
